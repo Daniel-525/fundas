@@ -11,6 +11,4 @@ COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 ENV PORT=10000
 EXPOSE 10000
 
-CMD ["sh", "-c", "sed -i \"s/8080/${PORT}/\" /usr/local/tomcat/conf/server.xml && catalina.sh run"]git add .
-                                                                                                   git commit -m "Cambiar a Tomcat 10 (Jakarta)"
-                                                                                                   git push
+CMD ["sh", "-c", "sed -i \"s/8080/${PORT}/\" /usr/local/tomcat/conf/server.xml && catalina.sh run"]
