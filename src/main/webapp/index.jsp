@@ -383,12 +383,12 @@
         }
 
         fundas.forEach((f, index) => {
-            const subtotal = (parseFloat(f.precio) * parseInt(f.cantidad)).toFixed(2);
+            const subtotal = (parseFloat(f.precio) * parseInt(f.cantidad)).toFixed(3);
             const fila = document.createElement("tr");
             fila.innerHTML =
                 "<td><strong>" + (index + 1) + "</strong></td>" +
                 "<td>" + f.producto + "</td>" +
-                "<td>$" + parseFloat(f.precio).toFixed(2) + "</td>" +
+                "<td>$" + parseFloat(f.precio).toFixed(3) + "</td>" +
                 "<td>" + f.cantidad + "</td>" +
                 "<td><strong>$" + subtotal + "</strong></td>" +
                 "<td><button type='button' class='btn-editar' onclick='editarFunda(" + index + ")'>✏️ Editar</button></td>";

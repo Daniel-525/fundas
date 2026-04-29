@@ -148,11 +148,11 @@ public class PdfGenerator {
                         contenidoTabla, Element.ALIGN_CENTER, colorFila);
                 agregarCeldaContenido(tablaProductos, d.getProducto(),
                         contenidoTabla, Element.ALIGN_LEFT, colorFila);
-                agregarCeldaContenido(tablaProductos, String.format("$%.2f", d.getPrecio()),
+                agregarCeldaContenido(tablaProductos, String.format("$%.3f", d.getPrecio()),
                         contenidoTabla, Element.ALIGN_RIGHT, colorFila);
                 agregarCeldaContenido(tablaProductos, String.valueOf(d.getCantidad()),
                         contenidoTabla, Element.ALIGN_CENTER, colorFila);
-                agregarCeldaContenido(tablaProductos, String.format("$%.2f", d.getSubtotal()),
+                agregarCeldaContenido(tablaProductos, String.format("$%.3f", d.getSubtotal()),
                         new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD), Element.ALIGN_RIGHT, colorFila);
 
                 contador++;
@@ -175,7 +175,7 @@ public class PdfGenerator {
             PdfPCell celdaTotal = new PdfPCell();
             celdaTotal.setBorder(Rectangle.BOX);
             celdaTotal.setBorderColor(new BaseColor(17, 153, 142));
-            celdaTotal.setBorderWidth(2f);
+            celdaTotal.setBorderWidth(3f);
             celdaTotal.setPadding(15);
             celdaTotal.setBackgroundColor(new BaseColor(240, 253, 250));
 
@@ -183,7 +183,7 @@ public class PdfGenerator {
             labelTotal.setAlignment(Element.ALIGN_RIGHT);
             labelTotal.setSpacingAfter(5);
 
-            Paragraph valorTotal = new Paragraph(String.format("$%.2f", factura.getTotal()), totalValor);
+            Paragraph valorTotal = new Paragraph(String.format("$%.3f", factura.getTotal()), totalValor);
             valorTotal.setAlignment(Element.ALIGN_RIGHT);
 
             celdaTotal.addElement(labelTotal);
