@@ -183,7 +183,7 @@ public class PdfGenerator {
             labelTotal.setAlignment(Element.ALIGN_RIGHT);
             labelTotal.setSpacingAfter(5);
 
-            Paragraph valorTotal = new Paragraph(String.format("$%.3f", factura.getTotal()), totalValor);
+            Paragraph valorTotal = new Paragraph(String.format("$%.2f", factura.getTotal()), totalValor);
             valorTotal.setAlignment(Element.ALIGN_RIGHT);
 
             celdaTotal.addElement(labelTotal);
