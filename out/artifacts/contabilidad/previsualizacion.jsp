@@ -354,7 +354,7 @@
                 <td><%= d.getProducto() %></td>
                 <td>$<%= String.format("%.3f", d.getPrecio()) %></td>
                 <td><%= d.getCantidad() %></td>
-                <td>$<%= String.format("%.3f", d.getSubtotal()) %></td>
+                <td>$<%= String.format("%.2f", d.getSubtotal()) %></td>
             </tr>
             <%
                 }

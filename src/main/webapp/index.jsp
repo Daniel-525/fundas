@@ -383,7 +383,7 @@
         }
 
         fundas.forEach((f, index) => {
-            const subtotal = (parseFloat(f.precio) * parseInt(f.cantidad)).toFixed(3);
+            const subtotal = (parseFloat(f.precio) * parseInt(f.cantidad)).toFixed(2);
             const fila = document.createElement("tr");
             fila.innerHTML =
                 "<td><strong>" + (index + 1) + "</strong></td>" +

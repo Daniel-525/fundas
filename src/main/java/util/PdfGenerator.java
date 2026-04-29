@@ -152,7 +152,7 @@ public class PdfGenerator {
                         contenidoTabla, Element.ALIGN_RIGHT, colorFila);
                 agregarCeldaContenido(tablaProductos, String.valueOf(d.getCantidad()),
                         contenidoTabla, Element.ALIGN_CENTER, colorFila);
-                agregarCeldaContenido(tablaProductos, String.format("$%.3f", d.getSubtotal()),
+                agregarCeldaContenido(tablaProductos, String.format("$%.2f", d.getSubtotal()),
                         new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD), Element.ALIGN_RIGHT, colorFila);
 
                 contador++;
